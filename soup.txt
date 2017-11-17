@@ -304,7 +304,7 @@
 
     new Image().src = u + "&ms=" + ms + "&rf=" + encodeURIComponent(document.referrer) + "&cb=" + Math.floor((Math.random() * 899999999) + 100000000);
 </script>
-<link href="//static.sfdict.com" rel="dns-prefetch"/><link href="//pixel.quantserve.com" rel="dns-prefetch"/><link href="//partner.googleadservices.com" rel="dns-prefetch"/><link href="//pubads.g.doubleclick.net" rel="dns-prefetch"/><link href="//pagead2.googlesyndication.com" rel="dns-prefetch"/><link href="//pr.ybp.yahoo.com" rel="dns-prefetch"/><link href="//ads.yahoo.com" rel="dns-prefetch"/><link href="//u.openx.net" rel="dns-prefetch"/><link href="//ib.adnxs.com" rel="dns-prefetch"/><link href="//ox-d.bstk.servedbyopenx.com" rel="dns-prefetch"/><link href="https://ad.doubleclick.net" rel="dns-prefetch"/><script src="http://static.sfdict.com/app/js/jquery-1.11.3.min-4069b.js" type="text/javascript"></script><script>
+<link href="//static.sfdict.com" rel="dns-prefetch"/><link href="//pixel.quantserve.com" rel="dns-prefetch"/><link href="//partner.googleadservices.com" rel="dns-prefetch"/><link href="//pubads.g.doubleclick.net" rel="dns-prefetch"/><link href="//pagead2.googlesyndication.com" rel="dns-prefetch"/><link href="//pr.ybp.yahoo.com" rel="dns-prefetch"/><link href="//ads.yahoo.com" rel="dns-prefetch"/><link href="//u.openx.net" rel="dns-prefetch"/><link href="//ib.adnxs.com" rel="dns-prefetch"/><link href="//ox-d.bstk.servedbyopenx.com" rel="dns-prefetch"/><link href="https://ad.doubleclick.net" rel="dns-prefetch"/><script>
     /**
      * The module is responsible for setting/incrementing the value of sc cookie which contains "sessionCount,pageviewCount" values.
      *
@@ -961,39 +961,6 @@ if(typeof UserController === "undefined" || !UserController.isUnder13()) {
     </noscript></head><body><img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=6034776&amp;cv=2.0&amp;cj=1"/>
 
 <!-- End comScore Tag -->
-<script src="//cdn.optimizely.com/js/1517994423.js"></script>
-<script>
-    optimizely.push(['setDimensionValue', 'device', 'Desktop']);
-    optimizely.push(['setDimensionValue', 'mseg', cookiesManager.getCookieValue("mseg") || ""]);
-
-    var experimentObj = window['optimizely'].data.state.activeExperiments,
-        variationMap = window['optimizely'].data.state.variationNamesMap,
-        experimentName=[],
-        variant=[],
-        img = new Image(),
-        url = 'http://track.dictionary.com/main.gif?ev=o&en=%40%40EXPERIMENT_NAME%40%40&vr=%40%40VARIANT%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop',
-        i = 0;
-
-    for (; i < experimentObj.length; i++) {
-        experimentName.push(
-            typeof window['optimizely'].data.experiments[experimentObj[i]] !== 'undefined'
-                ? encodeURIComponent(window['optimizely'].data.experiments[experimentObj[i]].name) : ''
-        );
-        variant.push(typeof variationMap[experimentObj[i]] !== 'undefined' ? encodeURIComponent(variationMap[experimentObj[i]]) : '');
-    }
-
-    if (experimentName.length > 0 && variant.length > 0) {
-        url = url.replace('%40%40REFERRER%40%40', encodeURIComponent(document.referrer))
-            .replace('%40%40CACHEBUSTER%40%40', Math.floor((Math.random() * 899999999) + 100000000))
-            .replace('%40%40EXPERIMENT_NAME%40%40', experimentName.join(','))
-            .replace('%40%40VARIANT%40%40', variant.join(','))
-            .replace('%40%40PAGENAME%40%40', pageName || '');
-
-        img.src = url;
-    }
-</script>
-
-
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -2215,9 +2182,8 @@ if (typeof UserController === "undefined" || !UserController.isUnder13()) {
     requirejs.config({
             waitSeconds: 60,
             baseUrl: "http://static.sfdict.com/dcom/js",
-            paths: {"appcore":"http:\/\/static.sfdict.com\/app\/js","options":"http:\/\/static.sfdict.com\/app\/js\/options-b826f","facebook":"http:\/\/connect.facebook.net\/en_US\/all","twitter":"https:\/\/platform.twitter.com\/widgets","instagram":"https:\/\/x.instagramfollowbutton.com\/follow","google-plus":"https:\/\/apis.google.com\/js\/platform","page\/serp\/main":"page\/serp\/main-7b742"},
+            paths: {"appcore":"http:\/\/static.sfdict.com\/app\/js","options":"http:\/\/static.sfdict.com\/app\/js\/options-b826f","facebook":"http:\/\/connect.facebook.net\/en_US\/all","twitter":"https:\/\/platform.twitter.com\/widgets","instagram":"https:\/\/x.instagramfollowbutton.com\/follow","google-plus":"https:\/\/apis.google.com\/js\/platform","jquery":"http:\/\/static.sfdict.com\/app\/js\/jquery-1.11.3.min-4069b","page\/serp\/main":"page\/serp\/main-d88d0"},
             shim: {"facebook":{"exports":"FB"},"twitter":{"exports":"twttr"},"instagram":[],"google-plus":{"exports":"googleplus"}}        });
-            define('jquery', [], function() { return window.jQuery; });
         define("runtime-options", function() {
         return {"shortSerp":true,"definitionsLimit":5,"definitionsDisplayed":3,"wotdLink":"<a href=\"http:\/\/www.dictionary.com\/wordoftheday\/\"  class=\"word\"  id=\"wotd\" data-linkid=\"rpilnc\" >$$word$$<\/a>","flashAudioPlayerPath":"http:\/\/static.sfdict.com\/app\/flash\/player-d6fab.swf","isFavoriteURL":"http:\/\/app.dictionary.com\/favorites\/api\/getfavorites","addFavoriteURL":"http:\/\/app.dictionary.com\/favorites\/api\/addword","searchTerm":"sheep","loginPageURL":"http:\/\/app.dictionary.com\/login\/core","clientPlatform":"Desktop","interstitialDashRenderApi":"http:\/\/app.dictionary.com\/api\/dash\/render\/ipadInterstitial\/dict_serp_ipadInterstitial","canonicalURL":"http:\/\/www.dictionary.com\/browse\/sheep","pageName":"","wotdApiUrl":"http:\/\/restapi.dictionary.com\/api\/wordoftheday","pageType":"serp-short","variant":false,"citeThisSourceAPIURL":"http:\/\/app.dictionary.com\/api\/citethissource.json?app=dictionary","collapseExpandSettings":{"luna":{"container":"#source-luna","types":{"def":{"name":"luna definitions","type":0,"desktop":{"visibleEntries":7,"condition":7},"mobile":{"visibleEntries":2,"condition":2}},"supEntry":{"name":"supplementary notes - entry-based elements","type":0,"desktop":{"visibleEntries":5,"condition":5},"mobile":{"visibleEntries":2,"condition":2}},"supText":{"name":"supplementary notes - textual elements","type":1,"desktop":{"visibleLines":5,"condition":5},"mobile":{"visibleLines":5,"condition":5}},"usgAlert":{"name":"usage alert - textual elements","type":1,"desktop":{"visibleLines":3,"condition":3},"mobile":{"visibleLines":3,"condition":3}}},"specCase":{"name":"special collapse expand for Luna Mobile","type":0,"mobile":{"visibleEntries":4,"condition":5}}},"idioms":{"container":"#source-ahdi2","types":{"cols":{"name":"idioms dictionary 2 cols list and text","type":3,"desktop":{"visibleLines":5,"condition":7}},"list":{"name":"idioms dictionary ordered list","type":4,"desktop":{"visibleLines":5,"condition":7}}}},"slang":{"container":"#source-das","types":{"def":{"name":"slang dictionary text based","type":5,"desktop":{"visibleLines":5,"condition":7}}}},"21century":{"container":"#source-dict21db","types":{"cent21_entry":{"name":"21st Century entry text","type":6,"desktop":{"visibleLines":5,"condition":7}}}},"collins":{"container":"#source-ced2","types":{"collins":{"name":"collins definitions","type":2,"desktop":{"entries":{"visibleEntries":3,"condition":5},"lines":{"visibleLines":10,"condition":12}}}}},"sentences":{"container":"#source-example-sentences","types":{"sentences_list":{"name":"example sentences list","type":8,"desktop":{"visibleList":3,"condition":4},"mobile":{"visibleList":10,"condition":11}}}}},"collapseExpandToggles":{"luna_entry":0,"luna_text":1,"idioms_cols":3,"idioms_list":4,"slang_text":5,"cent21_entry":6,"col_number":2,"sentences_list":8},"CTSParams":{"infix":"","clkpage":"dic","clksite":"dict","clkld":0},"webTrack":{"clickInner":"http:\/\/track.dictionary.com\/main.gif?ev=n&tg=%40%40TARGET%40%40&ar=%40%40ADREFRESH%40%40&ms=%40%40MSEG%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop","impressions":"http:\/\/track.dictionary.com\/main.gif?ev=i&lk=%40%40IMPRESSIONLINKIDS%40%40&ms=%40%40MSEG%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop","pageview":"http:\/\/track.dictionary.com\/main.gif?ev=p&ct=%40%40CONTENTTITLE%40%40&ms=%40%40MSEG%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop","click":"http:\/\/track.dictionary.com\/main.gif?ev=c&cl=%40%40LINKIDS%40%40&ci=%40%40ITEM%40%40&co=%40%40ORDINAL%40%40&ms=%40%40MSEG%40%40&ds=%40%40DESTINATION%40%40&qr=%25%25QUERY%25%25&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop"},"socialEvent":"{\"basePath\":\"http:\\\/\\\/track.dictionary.com\\\/track\\\/social\",\"attributes\":{\"site\":\"dict\",\"pageName\":\"dic\",\"ldid\":0}}"};
     });
